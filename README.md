@@ -1,203 +1,289 @@
-# Sistema Web de Gestión Comercial e Inventario
+# Sistema Web de Gestión Comercial
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en una aplicación web orientada a la gestión básica de procesos comerciales como productos, clientes, inventario y ventas.
+Sistema web desarrollado para la gestión de procesos comerciales como administración de usuarios, clientes, proveedores, productos, categorías, inventario, compras, ventas, facturación, reportes y auditoría.
 
-La aplicación fue desarrollada como un sistema frontend que funciona de manera local, enfocándose en la creación de una interfaz moderna, navegación entre módulos y simulación de funcionalidades principales de un sistema administrativo.
+El proyecto funciona actualmente como una aplicación frontend local, utilizando archivos estáticos HTML, CSS y JavaScript. La información del sistema se maneja mediante archivos locales y servicios JavaScript, sin conexión a un backend ni a una base de datos real.
 
-Actualmente el proyecto no cuenta con un backend ni una base de datos propia, por lo que la información utilizada dentro del sistema se maneja mediante datos locales o simulados dentro de la aplicación.
+El objetivo principal del proyecto es simular la estructura y funcionamiento de un sistema de gestión empresarial, organizando sus módulos de manera independiente y permitiendo la administración de diferentes procesos desde una interfaz web.
 
 ---
 
-# Funcionalidades Principales
+# Características Principales
 
-El sistema incluye diferentes módulos visuales que permiten simular operaciones comunes de una plataforma de gestión comercial:
-
-- Gestión de productos.
-- Gestión de clientes.
-- Control básico de inventario.
-- Registro simulado de ventas.
-- Panel principal con información general.
-- Visualización de estadísticas.
-- Navegación entre diferentes secciones.
-- Interfaz adaptable a diferentes dispositivos.
+- Panel administrativo con diferentes módulos.
+- Gestión de usuarios y roles.
+- Gestión de clientes y proveedores.
+- Administración de productos y categorías.
+- Control de inventario.
+- Registro de compras y ventas.
+- Gestión visual de facturas.
+- Módulo de reportes.
+- Registro de auditoría.
+- Sistema de autenticación local.
+- Manejo de información mediante servicios JavaScript.
+- Diseño modular basado en componentes separados.
 
 ---
 
 # Estructura del Proyecto
 
-La organización principal del proyecto es la siguiente:
-
 ```
-Proyecto/
+GestionComercial/
 │
-├── public/
-│   └── Archivos públicos y recursos estáticos.
+├── admin/
+│   │
+│   ├── dashboard/
+│   │   ├── dashboard.html
+│   │   ├── dashboard.css
+│   │   └── dashboard.js
+│   │
+│   ├── usuarios/
+│   │   ├── usuarios.html
+│   │   ├── usuarios.css
+│   │   └── usuarios.js
+│   │
+│   ├── roles/
+│   │   ├── roles.html
+│   │   ├── roles.css
+│   │   └── roles.js
+│   │
+│   ├── clientes/
+│   │   ├── clientes.html
+│   │   ├── clientes.css
+│   │   └── clientes.js
+│   │
+│   ├── proveedores/
+│   │   ├── proveedores.html
+│   │   ├── proveedores.css
+│   │   └── proveedores.js
+│   │
+│   ├── productos/
+│   │   ├── productos.html
+│   │   ├── productos.css
+│   │   └── productos.js
+│   │
+│   ├── categorias/
+│   │   ├── categorias.html
+│   │   ├── categorias.css
+│   │   └── categorias.js
+│   │
+│   ├── inventario/
+│   │   ├── inventario.html
+│   │   ├── inventario.css
+│   │   └── inventario.js
+│   │
+│   ├── compras/
+│   │   ├── compras.html
+│   │   ├── compras.css
+│   │   └── compras.js
+│   │
+│   ├── ventas/
+│   │   ├── ventas.html
+│   │   ├── ventas.css
+│   │   └── ventas.js
+│   │
+│   ├── facturas/
+│   │   ├── facturas.html
+│   │   ├── facturas.css
+│   │   └── facturas.js
+│   │
+│   ├── reportes/
+│   │   ├── reportes.html
+│   │   ├── reportes.css
+│   │   └── reportes.js
+│   │
+│   ├── auditoria/
+│   │   ├── auditoria.html
+│   │   ├── auditoria.css
+│   │   └── auditoria.js
+│   │
+│   ├── admin.css
+│   ├── admin.js
+│   └── index.html
 │
-├── src/
-│   │
-│   ├── assets/
-│   │   └── Imágenes, iconos y recursos gráficos.
-│   │
-│   ├── components/
-│   │   └── Componentes reutilizables de la interfaz.
-│   │
-│   ├── pages/
-│   │   └── Páginas principales del sistema.
-│   │
-│   ├── layouts/
-│   │   └── Estructuras generales de la aplicación.
-│   │
-│   ├── data/
-│   │   └── Datos simulados utilizados por el sistema.
-│   │
-│   ├── routes/
-│   │   └── Configuración de rutas y navegación.
-│   │
-│   ├── styles/
-│   │   └── Archivos de estilos globales.
-│   │
-│   ├── App.*
-│   │   └── Configuración principal de la aplicación.
-│   │
-│   └── main.*
-│       └── Punto de entrada del proyecto.
+├── data/
+│   └── Archivos de información local utilizados por el sistema.
 │
-├── package.json
-│   └── Dependencias y scripts necesarios.
+├── services/
+│   ├── storage.js
+│   ├── usuarioService.js
+│   ├── clienteService.js
+│   ├── productoService.js
+│   ├── ventaService.js
+│   ├── compraService.js
+│   ├── facturaService.js
+│   └── reporteService.js
 │
-└── README.md
+├── auth/
+│   ├── login.html
+│   ├── login.css
+│   ├── login.js
+│   ├── signup.html
+│   ├── signup.css
+│   └── signup.js
+│
+├── assets/
+│   ├── imagen/
+│   ├── icons/
+│   └── fonts/
+│
+├── utils/
+│   ├── validators.js
+│   ├── formatters.js
+│   ├── idGenerator.js
+│   └── dateHelper.js
+│
+├── reports/
+│   ├── ventasReport.js
+│   ├── comprasReport.js
+│   ├── inventarioReport.js
+│   └── dashboardReport.js
+│
+├── index.html
+├── styles.css
+├── mainContainer.css
+├── scripts.js
+├── auth.js
+│
+├── README.md
+└── package
 ```
 
 ---
 
 # Funcionamiento del Sistema
 
-El sistema funciona completamente desde el navegador mediante una aplicación frontend.
+El sistema está dividido en módulos independientes donde cada sección contiene sus propios archivos HTML, CSS y JavaScript.
 
-El usuario puede ingresar a los diferentes módulos disponibles e interactuar con la interfaz para realizar acciones como:
+Cada módulo tiene la responsabilidad de manejar una parte específica del sistema:
 
-- Consultar información.
-- Crear registros temporales.
-- Modificar datos.
-- Eliminar elementos.
-- Visualizar información general del negocio.
-
-La aplicación está diseñada para representar la estructura y experiencia de uso de un sistema comercial, pero actualmente no posee conexión con servicios externos ni almacenamiento permanente.
+- **Dashboard:** muestra información general y estadísticas.
+- **Usuarios:** administración de usuarios del sistema.
+- **Roles:** gestión de permisos y niveles de acceso.
+- **Clientes:** registro y administración de clientes.
+- **Proveedores:** control de proveedores.
+- **Productos:** administración del catálogo.
+- **Categorías:** organización de productos.
+- **Inventario:** control de existencias.
+- **Compras:** registro de adquisiciones.
+- **Ventas:** gestión de operaciones comerciales.
+- **Facturas:** administración de documentos generados.
+- **Reportes:** generación de información estadística.
+- **Auditoría:** seguimiento de acciones realizadas.
 
 ---
 
-# Tecnologías Utilizadas
+# Organización Interna
 
-Las principales tecnologías utilizadas en el desarrollo son:
+## Carpeta admin
 
-- HTML5.
-- CSS3.
-- JavaScript.
-- Framework frontend utilizado para la construcción de la interfaz.
-- Librerías adicionales para componentes visuales.
+Contiene todos los módulos principales del sistema administrativo. Cada módulo posee:
+
+- Archivo HTML para la interfaz.
+- Archivo CSS para los estilos.
+- Archivo JavaScript para la lógica del módulo.
+
+## Carpeta services
+
+Contiene funciones encargadas del manejo de datos y comunicación interna entre módulos.
+
+Ejemplos:
+
+- Gestión de usuarios.
+- Manejo de productos.
+- Procesos de ventas.
+- Procesos de compras.
+- Generación de reportes.
+
+## Carpeta auth
+
+Contiene el sistema de acceso al sistema:
+
+- Inicio de sesión.
+- Registro de usuarios.
+- Validaciones de autenticación local.
+
+## Carpeta utils
+
+Contiene funciones auxiliares utilizadas en diferentes partes del proyecto:
+
+- Validación de datos.
+- Formateo de información.
+- Generación de identificadores.
+- Manejo de fechas.
 
 ---
 
 # Instalación y Ejecución
 
-## Requisitos Previos
+## Requisitos
 
-Antes de ejecutar el proyecto es necesario tener instalado:
-
-- Node.js.
-- npm.
-
-Para comprobar la instalación:
-
-```bash
-node -v
-npm -v
-```
+- Navegador web actualizado.
+- Servidor local opcional como Live Server.
 
 ---
 
-## Instalación del Proyecto
+## Ejecutar el Proyecto
 
-Clonar el repositorio:
+1. Descargar o clonar el proyecto.
 
-```bash
-git clone URL_DEL_REPOSITORIO
+2. Abrir la carpeta:
+
+```
+GestionComercial
 ```
 
-Ingresar a la carpeta del proyecto:
+3. Ejecutar el archivo:
 
-```bash
-cd nombre-del-proyecto
+```
+index.html
 ```
 
-Instalar las dependencias:
-
-```bash
-npm install
-```
+También puede utilizarse una extensión como **Live Server** en Visual Studio Code para ejecutar el proyecto en un entorno local.
 
 ---
 
-## Ejecutar la Aplicación
+# Tecnologías Utilizadas
 
-Para iniciar el proyecto en modo desarrollo:
-
-```bash
-npm run dev
-```
-
-Después de ejecutar el comando, abrir en el navegador la dirección indicada por la consola, normalmente:
-
-```
-http://localhost:5173
-```
-
----
-
-# Arquitectura Actual
-
-El proyecto utiliza una arquitectura frontend donde:
-
-- La capa visual se encarga de mostrar la información al usuario.
-- Los componentes permiten reutilizar elementos de la interfaz.
-- Las páginas representan los diferentes módulos del sistema.
-- Los datos utilizados actualmente son locales o simulados.
-
-No existe comunicación con un servidor externo debido a que no se implementó una capa backend.
+- HTML5.
+- CSS3.
+- JavaScript.
+- JSON para almacenamiento local de información.
+- Diseño modular basado en archivos separados.
 
 ---
 
 # Limitaciones Actuales
 
-La versión actual del proyecto presenta las siguientes limitaciones:
+El sistema actualmente funciona de manera local, por lo que presenta las siguientes limitaciones:
 
-- No cuenta con backend.
-- No posee una base de datos real.
-- No tiene API REST.
-- No incluye autenticación real de usuarios.
-- La información no tiene persistencia permanente.
-- No está preparado actualmente para un entorno productivo empresarial.
+- No posee backend.
+- No utiliza una base de datos real.
+- No cuenta con API REST.
+- La autenticación es local.
+- Los datos no están almacenados en un servidor.
+- No está preparado actualmente para despliegue en producción.
 
 ---
 
 # Mejoras Futuras
 
-Como evolución del proyecto se pueden implementar:
+Entre las mejoras posibles se encuentran:
 
-- Backend utilizando tecnologías como Node.js, Spring Boot u otra alternativa.
-- Base de datos relacional.
-- Sistema de autenticación y permisos.
-- API para comunicación entre frontend y backend.
-- Sistema real de inventario y facturación.
+- Implementación de backend.
+- Integración con una base de datos SQL.
+- Creación de API REST.
+- Sistema real de usuarios y permisos.
 - Despliegue en servicios cloud.
-- Generación de reportes avanzados.
+- Implementación de facturación electrónica.
+- Mejoras de seguridad.
 
 ---
 
 # Estado del Proyecto
 
-**Estado actual:** Aplicación frontend funcional en entorno local.
+**Estado actual:** Aplicación web frontend funcional en entorno local.
 
-El proyecto representa una base inicial para la construcción de un sistema comercial completo, permitiendo posteriormente integrar servicios backend, almacenamiento de datos y funcionalidades empresariales avanzadas.
+El proyecto representa una base estructurada para un sistema de gestión comercial, con módulos organizados y preparados para una futura integración con servicios backend y bases de datos reales.
