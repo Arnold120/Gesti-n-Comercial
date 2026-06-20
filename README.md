@@ -107,14 +107,7 @@ GestionComercial/
 │   └── Archivos de información local utilizados por el sistema.
 │
 ├── services/
-│   ├── storage.js
-│   ├── usuarioService.js
-│   ├── clienteService.js
-│   ├── productoService.js
-│   ├── ventaService.js
-│   ├── compraService.js
-│   ├── facturaService.js
-│   └── reporteService.js
+│   ├── service.js
 │
 ├── auth/
 │   ├── login.html
@@ -124,31 +117,12 @@ GestionComercial/
 │   ├── signup.css
 │   └── signup.js
 │
-├── assets/
-│   ├── imagen/
-│   ├── icons/
-│   └── fonts/
-│
-├── utils/
-│   ├── validators.js
-│   ├── formatters.js
-│   ├── idGenerator.js
-│   └── dateHelper.js
-│
-├── reports/
-│   ├── ventasReport.js
-│   ├── comprasReport.js
-│   ├── inventarioReport.js
-│   └── dashboardReport.js
-│
 ├── index.html
 ├── styles.css
 ├── mainContainer.css
 ├── scripts.js
 ├── auth.js
-│
-├── README.md
-└── package
+└── README.md
 ```
 
 ---
@@ -204,16 +178,6 @@ Contiene el sistema de acceso al sistema:
 - Inicio de sesión.
 - Registro de usuarios.
 - Validaciones de autenticación local.
-
-## Carpeta utils
-
-Contiene funciones auxiliares utilizadas en diferentes partes del proyecto:
-
-- Validación de datos.
-- Formateo de información.
-- Generación de identificadores.
-- Manejo de fechas.
-
 ---
 
 # Instalación y Ejecución
@@ -250,7 +214,7 @@ También puede utilizarse una extensión como **Live Server** en Visual Studio C
 - HTML5.
 - CSS3.
 - JavaScript.
-- JSON para almacenamiento local de información.
+- LocalStorage para almacenamiento local de información.
 - Diseño modular basado en archivos separados.
 
 ---
