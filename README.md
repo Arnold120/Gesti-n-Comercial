@@ -1,180 +1,115 @@
-# Sistema Web Integral de Gestión Comercial, Facturación e Inventario
+# Sistema Web de Gestión Comercial e Inventario
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en un sistema web diseñado para la gestión integral de procesos comerciales dentro de una empresa. Su objetivo principal es centralizar y automatizar operaciones como administración de usuarios, clientes, proveedores, productos, compras, ventas, facturación e inventario.
+Este proyecto consiste en una aplicación web orientada a la gestión básica de procesos comerciales como productos, clientes, inventario y ventas.
 
-La aplicación permite llevar un mejor control de la información empresarial, reducir errores operativos y facilitar la toma de decisiones mediante una plataforma organizada, segura y escalable.
+La aplicación fue desarrollada como un sistema frontend que funciona de manera local, enfocándose en la creación de una interfaz moderna, navegación entre módulos y simulación de funcionalidades principales de un sistema administrativo.
 
-El sistema está desarrollado bajo una arquitectura modular, separando las responsabilidades de interfaz, lógica de negocio y almacenamiento de datos, permitiendo un mantenimiento más sencillo y futuras ampliaciones.
+Actualmente el proyecto no cuenta con un backend ni una base de datos propia, por lo que la información utilizada dentro del sistema se maneja mediante datos locales o simulados dentro de la aplicación.
 
 ---
 
-# Características Principales
+# Funcionalidades Principales
 
-## Gestión de Usuarios
+El sistema incluye diferentes módulos visuales que permiten simular operaciones comunes de una plataforma de gestión comercial:
 
-* Registro y administración de usuarios.
-* Control de acceso mediante roles y permisos.
-* Autenticación segura.
-* Gestión de estados de usuarios.
-
-## Gestión Comercial
-
-* Administración de clientes.
-* Administración de proveedores.
-* Gestión de productos y categorías.
-* Control de precios y disponibilidad.
-
-## Inventario
-
-* Registro de entradas y salidas de productos.
-* Actualización automática de existencias.
-* Control de movimientos de inventario.
-* Consulta del stock disponible.
-
-## Compras y Ventas
-
-* Registro de compras realizadas a proveedores.
-* Registro de ventas realizadas a clientes.
-* Actualización automática del inventario.
-* Historial de operaciones.
-
-## Facturación
-
-* Generación de facturas asociadas a ventas.
-* Consulta de documentos generados.
-* Control de información comercial.
-
-## Reportes
-
-* Visualización de información administrativa.
-* Consultas de ventas, compras e inventario.
-* Datos utilizados para análisis del negocio.
+- Gestión de productos.
+- Gestión de clientes.
+- Control básico de inventario.
+- Registro simulado de ventas.
+- Panel principal con información general.
+- Visualización de estadísticas.
+- Navegación entre diferentes secciones.
+- Interfaz adaptable a diferentes dispositivos.
 
 ---
 
 # Estructura del Proyecto
 
-El proyecto está organizado siguiendo una estructura modular para facilitar su desarrollo, mantenimiento y escalabilidad.
+La organización principal del proyecto es la siguiente:
 
 ```
-Sistema-Gestion-Comercial/
+Proyecto/
 │
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── routes/
-│   │   ├── assets/
-│   │   └── styles/
+├── public/
+│   └── Archivos públicos y recursos estáticos.
+│
+├── src/
 │   │
-│   ├── package.json
-│   └── README.md
-│
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   ├── services/
-│   │   ├── config/
-│   │   └── database/
+│   ├── assets/
+│   │   └── Imágenes, iconos y recursos gráficos.
 │   │
-│   ├── package.json
-│   └── .env
+│   ├── components/
+│   │   └── Componentes reutilizables de la interfaz.
+│   │
+│   ├── pages/
+│   │   └── Páginas principales del sistema.
+│   │
+│   ├── layouts/
+│   │   └── Estructuras generales de la aplicación.
+│   │
+│   ├── data/
+│   │   └── Datos simulados utilizados por el sistema.
+│   │
+│   ├── routes/
+│   │   └── Configuración de rutas y navegación.
+│   │
+│   ├── styles/
+│   │   └── Archivos de estilos globales.
+│   │
+│   ├── App.*
+│   │   └── Configuración principal de la aplicación.
+│   │
+│   └── main.*
+│       └── Punto de entrada del proyecto.
 │
-├── database/
-│   └── script.sql
-│
-├── docs/
-│   └── documentacion/
+├── package.json
+│   └── Dependencias y scripts necesarios.
 │
 └── README.md
 ```
 
 ---
 
-# Arquitectura del Sistema
+# Funcionamiento del Sistema
 
-El sistema utiliza una arquitectura de tres capas:
+El sistema funciona completamente desde el navegador mediante una aplicación frontend.
 
-## Frontend
+El usuario puede ingresar a los diferentes módulos disponibles e interactuar con la interfaz para realizar acciones como:
 
-Es la parte visual con la que interactúa el usuario.
+- Consultar información.
+- Crear registros temporales.
+- Modificar datos.
+- Eliminar elementos.
+- Visualizar información general del negocio.
 
-Responsabilidades:
-
-* Mostrar interfaces.
-* Capturar información.
-* Consumir servicios del backend.
-* Mostrar reportes y datos del sistema.
-
----
-
-## Backend
-
-Contiene la lógica principal del sistema.
-
-Responsabilidades:
-
-* Validar información.
-* Gestionar usuarios y permisos.
-* Ejecutar reglas de negocio.
-* Procesar ventas, compras e inventario.
-* Comunicarse con la base de datos.
+La aplicación está diseñada para representar la estructura y experiencia de uso de un sistema comercial, pero actualmente no posee conexión con servicios externos ni almacenamiento permanente.
 
 ---
 
-## Base de Datos
+# Tecnologías Utilizadas
 
-Encargada del almacenamiento permanente de información.
+Las principales tecnologías utilizadas en el desarrollo son:
 
-Contiene entidades como:
-
-* Usuarios.
-* Roles.
-* Clientes.
-* Proveedores.
-* Productos.
-* Compras.
-* Ventas.
-* Facturas.
-* Inventario.
-* Auditoría.
+- HTML5.
+- CSS3.
+- JavaScript.
+- Framework frontend utilizado para la construcción de la interfaz.
+- Librerías adicionales para componentes visuales.
 
 ---
 
-# Flujo de Funcionamiento
+# Instalación y Ejecución
 
-1. El usuario ingresa al sistema mediante autenticación.
-
-2. El frontend envía las credenciales al backend.
-
-3. El backend valida los datos y verifica permisos.
-
-4. El usuario accede a los módulos disponibles según su rol.
-
-5. Las operaciones realizadas son procesadas por la lógica del sistema.
-
-6. La información es almacenada o consultada desde la base de datos.
-
-7. El resultado es enviado nuevamente al frontend para mostrarse al usuario.
-
----
-
-# Requisitos Previos
+## Requisitos Previos
 
 Antes de ejecutar el proyecto es necesario tener instalado:
 
-* Node.js
-* npm
-* Motor de base de datos utilizado (MySQL/PostgreSQL)
-* Git
+- Node.js.
+- npm.
 
-Verificar instalación:
+Para comprobar la instalación:
 
 ```bash
 node -v
@@ -183,88 +118,37 @@ npm -v
 
 ---
 
-# Instalación del Proyecto
+## Instalación del Proyecto
 
-## 1. Clonar repositorio
+Clonar el repositorio:
 
 ```bash
 git clone URL_DEL_REPOSITORIO
 ```
 
-Entrar al proyecto:
+Ingresar a la carpeta del proyecto:
 
 ```bash
-cd Sistema-Gestion-Comercial
+cd nombre-del-proyecto
 ```
 
----
-
-# Configuración del Backend
-
-Ingresar a la carpeta:
-
-```bash
-cd backend
-```
-
-Instalar dependencias:
+Instalar las dependencias:
 
 ```bash
 npm install
 ```
 
-Crear archivo `.env`:
-
-Ejemplo:
-
-```env
-PORT=3000
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=password
-DB_NAME=gestion_comercial
-
-JWT_SECRET=secret_key
-```
-
-Configurar los datos según el entorno local.
-
-Ejecutar backend:
-
-```bash
-npm run dev
-```
-
-El servidor quedará disponible en:
-
-```
-http://localhost:3000
-```
-
 ---
 
-# Configuración del Frontend
+## Ejecutar la Aplicación
 
-Ingresar a la carpeta:
-
-```bash
-cd frontend
-```
-
-Instalar dependencias:
-
-```bash
-npm install
-```
-
-Ejecutar aplicación:
+Para iniciar el proyecto en modo desarrollo:
 
 ```bash
 npm run dev
 ```
 
-La aplicación estará disponible en:
+Después de ejecutar el comando, abrir en el navegador la dirección indicada por la consola, normalmente:
 
 ```
 http://localhost:5173
@@ -272,108 +156,48 @@ http://localhost:5173
 
 ---
 
-# Configuración de Base de Datos
+# Arquitectura Actual
 
-1. Crear una base de datos:
+El proyecto utiliza una arquitectura frontend donde:
 
-```sql
-CREATE DATABASE gestion_comercial;
-```
+- La capa visual se encarga de mostrar la información al usuario.
+- Los componentes permiten reutilizar elementos de la interfaz.
+- Las páginas representan los diferentes módulos del sistema.
+- Los datos utilizados actualmente son locales o simulados.
 
-2. Ejecutar el archivo SQL ubicado en:
-
-```
-database/script.sql
-```
-
-3. Verificar que las tablas hayan sido creadas correctamente.
+No existe comunicación con un servidor externo debido a que no se implementó una capa backend.
 
 ---
 
-# Usuarios del Sistema
+# Limitaciones Actuales
 
-Ejemplo de roles:
+La versión actual del proyecto presenta las siguientes limitaciones:
 
-## Administrador
-
-Permisos:
-
-* Gestión completa del sistema.
-* Usuarios.
-* Roles.
-* Configuración.
-* Reportes.
-
-## Ventas
-
-Permisos:
-
-* Clientes.
-* Ventas.
-* Facturación.
-
-## Inventario
-
-Permisos:
-
-* Productos.
-* Categorías.
-* Movimientos.
-
----
-
-# Tecnologías Utilizadas
-
-Frontend:
-
-* HTML5
-* CSS3
-* JavaScript
-* React
-
-Backend:
-
-* Node.js
-* Express
-
-Base de Datos:
-
-* MySQL/PostgreSQL
-
-Otros:
-
-* API REST
-* JWT
-* Git
-* Control de versiones
-
----
-
-# Buenas Prácticas Aplicadas
-
-* Separación frontend/backend.
-* Arquitectura modular.
-* Validación de datos.
-* Manejo de errores.
-* Control de acceso por roles.
-* Código organizado por responsabilidades.
-* Uso de variables de entorno.
+- No cuenta con backend.
+- No posee una base de datos real.
+- No tiene API REST.
+- No incluye autenticación real de usuarios.
+- La información no tiene persistencia permanente.
+- No está preparado actualmente para un entorno productivo empresarial.
 
 ---
 
 # Mejoras Futuras
 
-Algunas funcionalidades que pueden incorporarse:
+Como evolución del proyecto se pueden implementar:
 
-* Aplicación móvil.
-* Facturación electrónica.
-* Integración con sistemas contables.
-* Dashboard avanzado.
-* Notificaciones automáticas.
-* Despliegue en servicios cloud.
+- Backend utilizando tecnologías como Node.js, Spring Boot u otra alternativa.
+- Base de datos relacional.
+- Sistema de autenticación y permisos.
+- API para comunicación entre frontend y backend.
+- Sistema real de inventario y facturación.
+- Despliegue en servicios cloud.
+- Generación de reportes avanzados.
 
 ---
 
-# Autor
+# Estado del Proyecto
 
-Proyecto desarrollado como sistema de gestión empresarial orientado a la automatización de procesos comerciales.
+**Estado actual:** Aplicación frontend funcional en entorno local.
+
+El proyecto representa una base inicial para la construcción de un sistema comercial completo, permitiendo posteriormente integrar servicios backend, almacenamiento de datos y funcionalidades empresariales avanzadas.
