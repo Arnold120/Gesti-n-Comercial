@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Roles y Permisos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="roles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Gestión de Roles y Permisos</h1>
+
+    <div class="form-card">
+
+        <input type="hidden" id="rolId">
+
+        <div class="form-group">
+            <label>Nombre del rol</label>
+            <input type="text" id="nombre" placeholder="Nombre del rol">
+        </div>
+
+        <div class="form-group">
+            <label>Descripción</label>
+            <input type="text" id="descripcion" placeholder="Descripción">
+        </div>
+
+        <div class="form-group">
+            <label>Permisos</label>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="Usuarios"> Usuarios</label>
+                <label><input type="checkbox" value="Clientes"> Clientes</label>
+                <label><input type="checkbox" value="Proveedores"> Proveedores</label>
+                <label><input type="checkbox" value="Productos"> Productos</label>
+                <label><input type="checkbox" value="Categorías"> Categorías</label>
+                <label><input type="checkbox" value="Inventario"> Inventario</label>
+                <label><input type="checkbox" value="Compras"> Compras</label>
+                <label><input type="checkbox" value="Ventas"> Ventas</label>
+                <label><input type="checkbox" value="Facturas"> Facturas</label>
+                <label><input type="checkbox" value="Reportes"> Reportes</label>
+                <label><input type="checkbox" value="Auditoría"> Auditoría</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Estado</label>
+            <select id="estado">
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button onclick="guardarRol()">Guardar</button>
+            <button onclick="actualizarRol()">Actualizar</button>
+            <button onclick="limpiarFormulario()">Limpiar</button>
+        </div>
+
+    </div>
+
+    <div class="table-card">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Permisos</th>
+                    <th>Estado</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaRoles"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="../../auth.js"></script>
+<script src="../../services/storage.js"></script>
+<script src="roles.js"></script>
+
+</body>
+</html>

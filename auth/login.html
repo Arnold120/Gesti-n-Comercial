@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - GestionComercial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="auth-wrapper">
+
+    <div class="auth-card">
+
+        <div class="logo">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <h2>GestionComercial</h2>
+            <p>Inicio de sesión</p>
+        </div>
+
+        <div class="form">
+
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" placeholder="Correo electrónico">
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Contraseña">
+            </div>
+
+            <button onclick="handleLogin()">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Ingresar
+            </button>
+
+            <a href="signup.html">Crear una cuenta</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../auth.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>

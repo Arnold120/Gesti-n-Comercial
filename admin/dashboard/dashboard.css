@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 180px;
+}
+
+.section {
+    margin-top: 20px;
+    background: #111827;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #374151;
+}

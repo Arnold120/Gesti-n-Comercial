@@ -1,0 +1,23 @@
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+}
+
+.container{padding:20px}
+
+.table-card{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+padding:10px;
+border-bottom:1px solid #374151;
+}

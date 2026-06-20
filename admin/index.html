@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Administrativo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>GestionComercial</span>
+        </div>
+
+        <div class="user-info">
+            <i class="fa-solid fa-user"></i>
+            <p id="userName"></p>
+            <span id="userRole"></span>
+        </div>
+
+        <nav>
+
+            <a href="dashboard/dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="usuarios/usuarios.html"><i class="fa-solid fa-users"></i> Usuarios</a>
+            <a href="roles/roles.html"><i class="fa-solid fa-user-shield"></i> Roles</a>
+            <a href="clientes/clientes.html"><i class="fa-solid fa-user"></i> Clientes</a>
+            <a href="proveedores/proveedores.html"><i class="fa-solid fa-truck"></i> Proveedores</a>
+            <a href="productos/productos.html"><i class="fa-solid fa-box"></i> Productos</a>
+            <a href="categorias/categorias.html"><i class="fa-solid fa-tags"></i> Categorías</a>
+            <a href="inventario/inventario.html"><i class="fa-solid fa-warehouse"></i> Inventario</a>
+            <a href="compras/compras.html"><i class="fa-solid fa-cart-shopping"></i> Compras</a>
+            <a href="ventas/ventas.html"><i class="fa-solid fa-cash-register"></i> Ventas</a>
+            <a href="facturas/facturas.html"><i class="fa-solid fa-file-invoice"></i> Facturas</a>
+            <a href="reportes/reportes.html"><i class="fa-solid fa-chart-pie"></i> Reportes</a>
+            <a href="auditoria/auditoria.html"><i class="fa-solid fa-shield-halved"></i> Auditoría</a>
+
+        </nav>
+
+        <button onclick="logout()" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión
+        </button>
+
+    </aside>
+
+    <main class="content">
+
+        <h1>Bienvenido al Sistema</h1>
+        <p class="subtitle">Sistema de Gestión Comercial</p>
+
+        <div id="dashboardPreview"></div>
+
+    </main>
+
+</div>
+
+<script src="../auth.js"></script>
+<script src="../services/storage.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

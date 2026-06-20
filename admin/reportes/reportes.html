@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reportes</title>
+<link rel="stylesheet" href="reportes.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Reportes del Sistema</h1>
+
+<div class="buttons">
+<button onclick="generarReporte()">Generar Reporte</button>
+<button onclick="exportarCSV()">Exportar</button>
+<button onclick="limpiar()">Limpiar</button>
+</div>
+
+<div class="cards">
+
+<div class="card" id="ventas"></div>
+<div class="card" id="compras"></div>
+<div class="card" id="inventario"></div>
+
+</div>
+
+</div>
+
+<script src="reportes.js"></script>
+</body>
+</html>
